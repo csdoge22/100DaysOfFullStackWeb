@@ -1,3 +1,41 @@
 a{
     font-family:'Arial', Times, serif;
 }
+table, th, td{
+    border: 2px solid;
+    /* makes each table cell round*/
+    border-radius: 10px;
+    border-color: magenta;
+}
+/* border styles can be:
+dotted
+dashed
+solid
+double
+groove
+ridge
+inset
+outset
+none
+hidden */
+#t1{
+    background-color: white;
+    /* This is so that the border collapses*/ 
+    /*border-collapse: collapse;*/
+    border-radius: 10px;
+}
+/* colors every even row light blue*/
+tr:nth-child(even){
+    background-color: lightblue;
+}
+/* hover animation / event */
+tr:hover{
+    background-color: pink;
+}
+#list1{
+    display: inline-block;
+    list-style: none;
+}
+.city{
+    background-color:yellow;
+}
