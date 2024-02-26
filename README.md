@@ -1,8 +1,10 @@
 # 100DaysOfFullStackWeb
 I am going to focus on full stack web development for an hour every day for the next 100 days.
+No more than one consecutive day can be skipped.
+
 This contains:
 1. frontend development (HTML, CSS, JavaScript, Bootstrap, and Vue),
-2. backend/server side development and Docker (Tomcat, Servlets/JSP, Spring Boot, JDBC, MongoDB)
+2. backend/server side development and Docker (HTTP, Tomcat, Servlets/JSP, Spring Boot, JDBC, MongoDB)
 3. principles that combines both of them
 
 There are some checkpoint projects that I plan to do after learning
