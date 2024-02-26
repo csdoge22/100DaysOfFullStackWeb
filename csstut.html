@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- CSS styles web pages and HTML elements -->
+    <head>
+        <title>Not-So-Boring CSS Tutorial</title>
+        <meta charset="UTF-8">
+        <!-- Inline CSS Code -->
+        <style>
+            /* p is an example of a selector (HTML tags to find)
+            IDs and Classes make the process easier*/
+            p {
+                /* changes text color to red */
+                color: red;
+                /* aligns text to the center */
+                text-align: center;
+                /* the background attribute has the following parameters
+                (color, image, repeat, and position) */
+            }
+            /* ID selectors use # to find the element */
+            #init{
+                /* sets the font style to oblique (similar to italic) */
+                font-style: oblique;
+                text-align: center;
+                color: gray;
+            }
+            /* class selectors use . to find the element */
+            .paras{
+                /* sets the text font size to 10 pixels*/
+                font-size:10px;
+            }
+            .mid #sButton {
+                color: blue;
+                /* sets the background color to black */
+                background-color:yellow;
+            }
+            /* universal selection operator (affects all HTML elements) */
+            /* {
+                /* changes the font family to Lucida Sans with the following parameters */
+                /*font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }*/
+            .Last {
+                /* adjusts the spacing between the text and its outside*/
+                padding: 2px;
+                border-color: yellow;
+            }
+            body {
+                background-color: cyan;
+            }
+            #boxModel p{
+                color: maroon;
+                padding: 2px; /* padding is the block area inside the border but around the text */
+                border: 2px solid; /* border is nested between padding and margin */
+                margin: 2px; /* margin is the block area outside the border */
+            }
+            #below{
+                border-bottom-style: solid;
+                border-top-style: none;
+                border-left-style: none;
+                border-right-style: none;
+            }
+            #circ{
+                border-radius: 5px;
+                border: 2px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Internal CSS uses HTML attributes to style tags -->
+        <!-- External CSS uses another file for the CSS code (to link to the HTML file) -->
+
+        <h1 id="init">CSS Dump</h1>
+        <p>Paragraph block that is red because of CSS</p>
+        <p class="paras">Elements can be selected using IDs and Classes</p>
+        <p class="paras">This and the above statement uses a class</p>
+        <span class="mid">
+            <form>
+                <option id="sButton" value="submit">Checkmate</option>
+            </form>
+        </span>
+        <p class="Last" id="lol">This chunk of text points to two classes</p>
+        <div id="boxModel">
+            <h1> The Box Model consists of Margin ( Border ( Padding ( Content ) ) )</h1>
+            <p>Context (also has padding 2px, border 2px, and margin 2px</p>
+
+            <h2>Borders</h2>
+            <p>They have many styles:</p>
+            <ul id="lst">
+                <li style="border: 2px dotted;">dotted</li>
+                <li style="border: 2px dashed;">dashed</li>
+                <li style="border: 2px solid;">solid</li>
+                <li style="border: 2px double;">double</li>
+                <li style="border: 2px groove;">groove</li>
+                <li style="border: 2px ridge;">ridge</li>
+                <li style="border: 2px inset;">inset</li>
+                <li style="border: 2px outset;">outset</li>
+                <li style="border: 2px none;">none</li>
+                <li style="border: 2px hidden;">hidden</li>
+            </ul>
+
+            <p id="below">This text only has a border below the text</p>
+            <p id="circ">This text block has a rounded barrier</p>
+        </div>
+    </body>
+</html>

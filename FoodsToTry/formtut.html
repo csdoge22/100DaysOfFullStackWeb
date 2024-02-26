@@ -12,7 +12,7 @@
             <p>Checkbox</p>
             <input type="checkbox">
             <p>Text Field</p>
-            <input type="text">
+            <input type="text" autocomplete autocapitalize>
             <p>Button</p>
             <input type="button">
             <p>Submit</p>
@@ -22,6 +22,8 @@
             <!-- _top, _self, _blank, _parent, framename-->
         </form>
         <br/>
+        <section>
+        <p>Choose a chili pepper from the dropdown</p>
         <form name="Elements">
             <!-- ID/class is useful for styling -->
             <select id="chili_peppers">
@@ -29,9 +31,15 @@
                 <option value="Tabasco">Tabasco</option>
                 <option value="Cayenne">Cayenne</option>
                 <option value="Reaper">Reaper</option>
-
+                <input readonly>
+                <p>This text box is read-only meaning that I cannot add anything to it</p>
+                <input disabled>
+                <p>This textbox is still visible but I cannot even hover over it</p>
+                <!-- JavaScript can read the selected dropdown option-->
             </select>
         </form>
+        </section>
+        
         <!--
             More form tags:
             <rel> what is related between a resource and the form
@@ -39,4 +47,29 @@
             <accept-charset> what charsets can be approved
         -->
     </body>
+    <!--
+        Form input types:
+        <input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+    -->
 </html>
