@@ -16,9 +16,22 @@
                 background-attachment: fixed;
             }
         </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- this makes sure the website is viewable on all devices-->
     </head>
     <!-- Comment -->
     <body>
+        <header class="haf">
+            <h1 style="color:green">Tutorial</h1>
+        </header>
+        <nav>
+            <p>Tutorials from W3Schools:</p>
+            <a href="https://www.w3schools.com/html/html_layout.asp">HTML</a>
+            <a href="https://www.w3schools.com/html/html_layout.asp">CSS</a>
+            <a href="https://www.w3schools.com/html/html_layout.asp">JavaScript</a>
+
+        </nav>
+        <section>
         <h1 style:"font-size: 500px">SANS</h1>
         <h1 id="first">Cursed Heading 1</h1>
         <h2>Heading 2</h2>
@@ -33,7 +46,7 @@
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Link using a href</a>
 
         <p style="color:red">This text is red because of the style attribute</p>
-        <img src="Carolina-Reaper-Pepper.jpg" alt="Carolina Reaper Pepper" width="300" height="600">
+        <img src="Carolina-Reaper-Pepper.jpg" alt="Carolina Reaper Pepper" width="300" height="600" style="max-width: 100%">
 
         <p><b>Bold</b> <i>Italic</i> <u>Underline</u> <sub>Subscript</sub> <sup>Superscript</sup></p>
         <strong>Strong (Important text)</strong>
@@ -151,11 +164,40 @@
         </div>
         <p>Elements can belong to more than one class</p>
         <p>IDs on the other hand can only be used once</p>
-        <iframe src="https://www.w3schools.com/js/default.asp" title="getRickRolled" style="height:200px;width:300px;"></iframe>
-
-        <h1 id="hello"></h1>
+        <p id="hello"></p>
+        <iframe src="https://www.w3schools.com/js/default.asp" alt="IFrame" title="getRickRolled" style="height:200px;width:300px;"></iframe>
+        <p>This IFrame is not working</p>
+        
         <script>
-            document.getElementByID("hello").innerHTML = "Hello, World!";
+            document.getElementByID('hello').innerHTML = "Hello, World!";
         </script>
+
+        <p>This block inserts what claims to be code</p>
+        <code>
+            m = 5;
+            n = 2;
+            sum = m + n;
+        </code>
+
+        <p>Copy text using <kdb>Ctrl + V</kdb></p>
+        <p><samp>Message Output</samp></p>
+        <p><var>k</var> is a variable</p>
+        <p><pre>Some preformatted text</pre> :))</p>
+        <!-- Semantic tags tell about the content ex table, form, etc... -->
+    </section>
+    <aside>
+        <p>this content is displayed using the aside attribute</p>
+    </aside>
+    <footer class="haf">
+        <p>Name: Sonit Ambashta</p>
+        <p>Year of graduation: 2027</p>
+    </footer>
+    <section>
+        <!-- Entities involving < and > require &lt and &rt so that HTML does not get confused between
+        tags and operators-->
+        <!-- defines entities and entity numbers respectively -->
+        &entityOne
+        &#eNum
+    </section>
     </body>
 </html>

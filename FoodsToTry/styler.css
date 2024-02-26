@@ -39,3 +39,9 @@ tr:hover{
 .city{
     background-color:yellow;
 }
+.haf{
+    background-color:white;
+    border: 3px solid;
+    border-color:red;
+}
+/* Layouts include float, flex, grid, framework, etc...*/

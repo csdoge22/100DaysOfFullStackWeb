@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Forms In HTML Tutorial</title>
+    </head>
+    <!-- forms help with collecting user input-->
+    <body>
+        <!-- I am not worrying about HTTP methods right now since the focus is on frontend development. -->
+        <form name="Tutorial" action="https://www.youtube.com/@programmingwithmosh/videos" target="_blank" method="get" autocomplete="on" novalidate>
+            <p>Radio Button</p>
+            <input type="radio">
+            <p>Checkbox</p>
+            <input type="checkbox">
+            <p>Text Field</p>
+            <input type="text">
+            <p>Button</p>
+            <input type="button">
+            <p>Submit</p>
+            <input type="submit">
+            <label>Labels are text that can be handled with form</label>
+            <p>The target attribute determines whether the action is on a new tab, the same tab, etc...</p>
+            <!-- _top, _self, _blank, _parent, framename-->
+        </form>
+        <br/>
+        <form name="Elements">
+            <!-- ID/class is useful for styling -->
+            <select id="chili_peppers">
+                <option value="Habanero">Habanero</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Cayenne">Cayenne</option>
+                <option value="Reaper">Reaper</option>
+
+            </select>
+        </form>
+        <!--
+            More form tags:
+            <rel> what is related between a resource and the form
+            <enctype> how should data be encrypted
+            <accept-charset> what charsets can be approved
+        -->
+    </body>
+</html>
