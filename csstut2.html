@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Not-So-Boring CSS Tutorial 2</title>
+        <style>
+            #fonts #fontfamily #one{
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                /* font styles can be (bold, italic, underline, oblique) */
+                font-style: italic;
+                font-weight: bold;
+                font-variant: small-caps;
+                font-size: 40px;
+            }
+            .micro-5-regular {
+                font-family: "Micro 5", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            #fonts #fontfamily #two{
+                font-family: "Micro 5", sans-serif;
+                font-style: oblique;
+                font-size: 70px;
+            }
+
+            #lists #one{
+                list-style-type:circle;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="fonts">
+            <section id="fontfamily">
+                <p id="one">This text has a different font</p>
+                <!-- fonts have what are called fallbacks (serif, sans-serif, monospace, cursive, fantasy)-->
+                <p id="two">This text uses a google font</p>
+            </section>
+        </div>
+        <div id="lists">
+            <ul id="one">
+                <li>A</li>
+                <li>B</li>
+            </ul>
+            <ul id="two">
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "100DaysOfFullStackWeb",
+			"path": "."
+		},
+		{
+			"name": "FreeLancerSite",
+			"path": "../../.Trash/FreeLancerSite"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "100DaysOfFullStackWeb"
+	}
+}
