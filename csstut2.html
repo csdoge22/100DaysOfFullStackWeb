@@ -3,6 +3,9 @@
     <head>
         <title>Not-So-Boring CSS Tutorial 2</title>
         <style>
+            body{
+                background-color: orange;
+            }
             #fonts #fontfamily #one{
                 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 /* font styles can be (bold, italic, underline, oblique) */
@@ -23,8 +26,78 @@
                 font-size: 70px;
             }
 
-            #lists #one{
-                list-style-type:circle;
+            #lists #one {
+                /* the list style type can be set to "none" for no bullets to show */
+                list-style-image: url('star.png');
+                text-indent: 100px;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+            #lists #two {
+                /* list-style-image: url('Carolina-Reaper-Pepper.jpg'); sets every bullet of the list to a star image*/
+                /* the bullets appear outside any borders involving the list items*/
+                list-style-position: outside;
+                border: 2px solid;
+            }
+            #lists #two .litem {
+                list-style-position: outside;
+                border: 2px solid;
+            }
+            #tables #cars {
+                border: 2px solid;
+                /* the table will take up the horizontal length of the site */
+            }
+            #tables #cars .r {
+                border: 3px double;
+                border-collapse: collapse;
+                height: 70px;
+                /* centers the table data associated with class .r */
+                text-align: center;
+                align-content: center;
+                font-style: oblique;
+                margin: 5px;
+                padding: 10px;
+                overflow: auto;
+            }
+            #tables #cars .r:hover{
+                /* upon hovering a row, it will be colored white */
+                background-color: white;
+                z-index: 1;
+            }
+            #position{
+                /* the position of this span is sticky */
+                position: sticky;
+            }
+            /* displays can be either inline, block, contents, flex, grid, inline-block, inline-flex, inline-grid, inline-table, list-item, run-in,
+               table, table-caption, table-column-group, table-header-group, table-footer-group, table-row-group, table-cell, table-column, table-row,
+               none, initial, or inherit*/
+
+            /* margin can also be set to auto in order to take up the whole length */
+
+            /* z-index refers to the order each element is visible */
+
+            #Float #road{
+                width: 200px;
+                height: 200px;
+                float: right;
+            }
+            #Float{
+                float: left 15px;
+            }
+            #Float .s1 {
+                background-color: red;
+            }
+            #Float .s2 {
+                background-color: yellow;
+            }
+            #Float .s3{
+                background-color: green;
+            }
+            #Float #ClearFix{
+                border: 2px solid;
+            }
+            .clearfix{
+                overflow: auto;
             }
         </style>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,10 +118,64 @@
                 <li>B</li>
             </ul>
             <ul id="two">
-                <li>C</li>
-                <li>D</li>
-                <li>E</li>
+                <li class="litem">The bullet is outside the border frame</li>
+                <li class="litem">D</li>
+                <li class="litem">E</li>
             </ul>
+            <p>Note: the images on the far left are supposed to be stars but do not show for some reason</p>
         </div>
+        <div id="tables" style="overflow-x: auto;">
+            <table id="cars">
+                <tr class="r">
+                    <th class="r" class="h">Brand</th>
+                    <th class="r" class="h">Model</th>
+                    <th class="r" class="h">Year</th>
+                    <th class="r" class="h">Still Stable?</th>
+                </tr>
+                <tr class="r">
+                    <td class="r">Ford</td>
+                    <td class="r">GT</td>
+                    <td class="r">1964</td>
+                    <td class="r">no</td>
+                </tr>
+                <tr class="r">
+                    <td class="r">Bugatti</td>
+                    <td class="r">Chiron Super Sport 300+</td>
+                    <td class="r">2019</td>
+                    <td class="r">yes</td>
+                </tr>
+                <tr class="r">
+                    <td class="r">Ferrari</td>
+                    <td class="r">f12tdf</td>
+                    <td class="r">2015</td>
+                    <td class="r">yes</td>
+                </tr>
+            </table>
+        </div>
+        <span id="position">
+            <p>Positions can have five different forms: </p>
+            <ul>
+                <li>static</li>
+                <li>relative</li>
+                <li>fixed</li>
+                <li>absolute</li>
+                <li>sticky</li>
+            </ul>
+        </span>
+        <article id="Overflow">
+            <p>Overflow can be either visible, hidden, scroll, or auto</p>
+        </article>
+        <article id="Float">
+            <p>Floating is used for positioning and formatting various types of content</p>
+            <img id="road" src="1200px-Road_in_Norway.jpg" alt="Road in Norway">
+            <span class="s1">Panel 1</span>
+            <span class="s2">Panel 2</span>
+            <span class="s3">Panel 3</span>
+            <p>The panels float next to each other</p>
+            <p>Clear can also be used to revert floating</p>
+            <div class="clearFix">
+                <p>Paragraph of text</p>
+            </div>
+        </article>
     </body>
 </html>
