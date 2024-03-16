@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- HTML -->
+<html lang="en">
+    <head>
+        <title>Formatted Website (CSS Tut 3) </title>
+        <!-- CSS -->
+        <style>
+            body {
+                background-color: rgba(200,200,249,0.4);
+            }
+            #navbar{
+                background-color: cadetblue;
+            }
+            #navbar #navlist{
+                list-style-type: none;
+            }
+            #navbar #navlist .btn {
+                display: inline-block;
+                border: 2px solid;
+                text-align: center;
+            }
+            #navbar #navlist .btn:hover {
+                background-color: red;
+            }
+            #Attr .l1[class] {
+                background-color: yellow;
+            }
+            #Attr #rand [id~="rp"]{
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            /* for | the value must be alone */
+            #Attr #rand [id|="r"]{
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            #Attr #rand [id^="r"]{
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            /* $= checks for attributes for values ending */
+            /* *= applies for attributes whose values contain the argument or part of it */ 
+            
+        </style>
+    </head>
+    <body>
+        <header id="hd">
+            <h1 style="text-align: center;">Enter title of website here</h1>
+        </header>
+        <nav id="navbar">
+            <ul id="navlist">
+                <li class="btn">About</li>
+                <li class="btn">Contacts</li>
+                <li class="btn">Portfolio</li>
+            </ul>
+        </nav>
+        <article id="Attr">
+            <p>Attributes can be inside []</p>
+            <p class="l1">This text is colored with the attrbute [.l1]</p>
+            <p class="l1">This text is colored with the attrbute [.l1]</p>
+            <div id="rand">
+                <p id="r-p">Attribute can also be used by value</p>
+                <p id="r-h">Both paragraphs are customized</p>
+                <h6 id="r1">This header has an id containing r so it is also the same font</h6>
+            </div>
+        </article>
+        <footer id="ft">
+
+        </footer>
+    </body>
+</html>

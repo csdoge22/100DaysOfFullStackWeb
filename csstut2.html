@@ -4,7 +4,7 @@
         <title>Not-So-Boring CSS Tutorial 2</title>
         <style>
             body{
-                background-color: orange;
+                background-color: rgba(210, 10, 160,0.1);
             }
             #fonts #fontfamily #one{
                 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -99,6 +99,99 @@
             .clearfix{
                 overflow: auto;
             }
+            #Align .one {
+                display: block;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: 40%;
+                border: 10px solid chocolate;
+            }
+            #Align #two {
+                display: flex;
+                line-height: 100px;
+                border: 2px solid aquamarine;
+                vertical-align: middle;
+            }
+            /* descendent */
+            #Combinators #c {
+                color: green;
+            }
+            /* child */
+            #Combinators > p {
+                margin: 2px;
+            }
+            /* adjacent sibling */
+            #Combinators + p {
+                padding: 2px;
+            }
+            /* general sibling */
+            #Combinators ~ p {
+                margin: 2px;
+            }
+            /* hover is the pseudoclass */
+            #Combinators:hover{
+                color: aquamarine;
+            }
+            #Combinators #d::first-letter{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            /* pseudo-classes have two colons while pseudo-elements have only one colon */
+            #Opacity .two {
+                opacity: 0.5;
+            }
+            /* the opacity of the image will change when hovering over it */
+            #Opacity .two:hover {
+                opacity: 1.0;
+            }
+            /* we need a window for the dropdown */
+            /* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+    /* the right attribute aligns the dropdown on the right side instead of the left side*/
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  
         </style>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -177,5 +270,36 @@
                 <p>Paragraph of text</p>
             </div>
         </article>
+        <article id="Align">
+            <p class="one">This text and image are centered</p>
+            <img class="one" src="star.png" width="500" height="500">
+            <p id="two">Vertically aligned text</p>
+        </article>
+        <div id="Combinators">
+            <p id="d">(space key) is for descendents</p>
+            <p id="c">> is for child selector</p>
+            <p id="a">+ is for adjacent sibling</p>
+            <p id="g">~ is for general sibling selector</p>
+        </div>
+        <div id="Opacity">
+            <img src="topic-golden-gate-bridge-gettyimages-177770941.jpg" class="one" style="width: 500px; height: 500px">
+            <!-- The second image is translucent -->
+            <img src="topic-golden-gate-bridge-gettyimages-177770941.jpg" class="two" style="width: 500px; height: 500px">
+            <p style="font-family:'Courier New', Courier, monospace">The background color manages opacity through RGBA</p>
+        </div>
+        <br>
+        <section id="Navbar">
+            <p>Navbar is equivalent to a list of links</p>
+            <p>Inline display allows the links to be displayed horizontally</p>
+            <p>Block display allows links to be displayed verticly</p>
+        </section>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">These buttons</a>
+                <a href="#">take you to the top</a>
+                <a href="#">of the website</a>
+            </div>
+        </div>
     </body>
 </html>
