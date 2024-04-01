@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Web Tutorial</title>
+        <meta charset="UTF-8">
+        <link ref="stylesheet" href="style.css">
+    </head>
+    <body>
+        <p>Note: I knew the programming aspects of JS like variables, classes, functions, etc... so I moved to the web specific tasks</p>
+        <div id="methods">
+            <!-- This paragraph is going to be changed by JavaScript -->
+            <p id="p1"></p>
+        </div>
+        <section id="documentClass">
+            <!-- these elements can also be found using JavaScript -->
+            <h1>Some heading 1</h1>
+            <h1>Some heading 2</h1>
+            <h1>Some heading 3</h1>
+            <h1>Some heading 4</h1>
+            <p class="loc">Paris</p>
+            <p class="loc">London</p>
+            <p class="loc">Rome</p>
+            <p id="p2"></p>
+            <span>Notice as we add or remove the number of headings, the counter also decreases</span>
+        </section>
+        <!-- Query Selectors allow retrieval of certain tags as well -->
+        <div id="querySel">
+            <p>Text to be searched</p>
+            <p>Using the <b>querySelector</b> method</p>
+            <p id="p3"></p>
+            <div id="objQuerySel">
+                <form id="f1" name="form1" target="_self">
+                    <label>First Name:</label>
+                    <input type="textbox" value="Tyrese">
+                    <label>Last Name:</label>
+                    <input type="textbox" value="Gibson">
+                    <input type="submit">
+                    <p id="fElems"></p>
+                </form>
+                <form id="f2" name="form2" target="_blank" onsubmit="return validateForm()" method="post">
+                    <label>First Name:</label>
+                    <input type="textbox">
+                    <label>Last Name:</label>
+                    <input type="textbox">
+                    <input type="submit">
+                    <p id="sElems"></p>
+                </form>
+                <!-- sometimes JS can place restrictions on forms (i.e. not submitting when missing a required text field) -->
+            </div>
+            <div id="modifyingElements">
+                <img id="img1" src="djohn.jpeg">
+            </div>
+            
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
