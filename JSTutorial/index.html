@@ -24,7 +24,7 @@
             <span>Notice as we add or remove the number of headings, the counter also decreases</span>
         </section>
         <!-- Query Selectors allow retrieval of certain tags as well -->
-        <div id="querySel">
+        <section id="querySel">
             <p>Text to be searched</p>
             <p>Using the <b>querySelector</b> method</p>
             <p id="p3"></p>
@@ -47,10 +47,33 @@
                 </form>
                 <!-- sometimes JS can place restrictions on forms (i.e. not submitting when missing a required text field) -->
             </div>
-            <div id="modifyingElements">
-                <img id="img1" src="djohn.jpeg">
+            <div>
+                <h6 id="changeCSS">This is the text whose color is being changed by JS </h6>
+                <!-- event handling -->
+                <button id="btn" type="button">Click Me to change the above heading to red</button>
             </div>
-            
+            <div id="Events">
+                <h1 id="h1" onmouseover="document.getElementById('h1').innerHTML = 'Do not even think about clicking it'" onmouseout="document.getElementById('h1').innerHTML = 'Do not click on this'"onclick="document.getElementById('h1').innerHTML = 'What did I just say?'">Do not click on this</h1>
+                <!-- a JS function can also go here-->
+                <p id="mult">Weird to click</p>
+                <h4>This paragraph consists of a number and will change randomly based on whether the window is resized or not</h4>
+                <p id="w"></p>
+            </div>
+            <section id="AddTwoNums">
+                <h1>This is a simple interface for adding two integers (positive and negative)</h1>
+                <textarea id="n1"></textarea>
+                <textarea id="n2"></textarea>
+                <button id="calc">Calculate</button>
+                <p id="res"></p>
+            </section>
+            <div id="bubcap">
+                <h1>Event Bubbling VS Event Capturing</h1>
+                <p id="para">Bubbling triggers the internal event listeners all the way to the outmost listeners
+                    while Capturing triggers all external event listeners all the way to the inner-most listeners
+                </p>
+                <p id="para1">You can notice the differences between bubbling and capturing in the console
+                </p>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>

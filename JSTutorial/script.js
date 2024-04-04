@@ -51,5 +51,70 @@ function validateForm(){
         return false;
     }
 }
-
 // this is the code used to stop the form from submitting when the first name field is missing
+
+// Using JS to change CSS
+const heading = document.getElementById("changeCSS");
+heading.style.color = 'blue';
+
+const btn = document.getElementById("btn");
+btn.addEventListener("click",function(){
+  heading.style.color = 'red';
+});
+
+// multiple event handlers
+btn.addEventListener("mouseover",function(){
+  document.getElementById('mult').innerHTML = 'sure, click if you want';
+});
+
+btn.addEventListener("mouseout",function(){
+  document.getElementById('mult').innerHTML = 'Go on, do it';
+});
+
+btn.addEventListener("click",function(){
+  document.getElementById('mult').innerHTML = '';
+});
+
+// event listeners on the window
+window.addEventListener("resize",function(){
+  this.document.getElementById('w').innerHTML = Math.random();
+})
+
+function add(n1,n2){
+  // this function is not void since I want to be able to write the output to the website
+  return n1+n2;
+}
+// parameters in event listeners (adding two numbers)
+const b1 = document.getElementById('calc');
+b1.addEventListener("click",function(){
+  let n1 = parseInt(document.getElementById('n1').value);
+  let n2 = parseInt(document.getElementById('n2').value);
+
+  // this is the reason that the add function is not void
+  document.getElementById('res').innerHTML = add(n1,n2);
+})
+
+// bubbling vs capturing
+const para = document.getElementById('para');
+const para1 = document.getElementById('para1');
+
+//sets capturing to true
+para.addEventListener("mouseout",function(){
+  para.innerHTML = 'Changed';
+  console.log('Event 1');
+},true);
+para.addEventListener("mouseout",function(){
+  para.style.color = 'blue';
+  console.log('Event 2');
+},true);
+
+para1.addEventListener("mouseout",function(){
+  para1.innerHTML = 'Changed';
+  console.log('Event 1');
+},false);
+para1.addEventListener("mouseout",function(){
+  para1.style.color = 'blue';
+  console.log('Event 2');
+},false);
+
+// event listeners can also be removed as well
