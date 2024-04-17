@@ -1,0 +1,60 @@
+#theading{
+    color: blue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.minorHeadings{
+    color: blue;
+}
+#box{
+    width: 300px;
+    height: 100px;
+    background-color: cyan;
+    border: 2px ridge black;
+}
+#box:active{
+    /* degrees can also be negative */
+    transform: translate(50px,100px);
+    transform: scale(2,3);
+    /* equivalent to using scaleX(2) and scaleY(3)*/
+    /* transform: rotate(20deg);
+    this also works for 3d but the rotateZ method must be used */
+    /* transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY) */
+}
+#box:hover{
+    transform: skew(20deg,10deg);
+}
+#box2{
+    width: 100px;
+    height: 60px;
+    background-color: peachpuff;
+    transition: width 2s;
+    overflow: scroll;
+    transition-delay: 0s;
+
+    /* transitions can be used with transformations */
+}
+#box2:hover{
+    background-color: red;
+    width: 200px;
+    height: 120px;
+    /* timing functions can be linear, ease, ease-in, ease-out, ease-in-out,*/
+    transition-timing-function: ease-in;
+}
+@keyframes example {
+    from {background-color: red; color:black;}
+    to {background-color: blue; color:white;}
+}
+#box3{
+    background-color: red;
+    /*animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;*/
+
+    animation: example 4s ease 1s infinite alternate;
+
+    /* animations can be run normally, reversely, alternately, or alternate reversely as well*/
+    /* speed curves can also be linear, ease, ease-in, ease-out, or ease-in-out */
+}

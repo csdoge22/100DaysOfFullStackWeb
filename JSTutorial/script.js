@@ -118,3 +118,18 @@ para1.addEventListener("mouseout",function(){
 },false);
 
 // event listeners can also be removed as well
+
+const p = document.createElement("p");
+const nh1 = document.getElementById("nh1");
+const node = document.createTextNode("This text is appended");
+
+// insert before has two parameters
+nh1.appendChild(node);
+nh1.removeChild(node);
+
+const countries = document.getElementsByTagName('p');
+const output = document.getElementById('output');
+output.append("The countries are: ");
+for(let i=0; i<countries.length; i++){
+  output.innerHTML = output.innerHTML+countries[i].innerHTML;
+}
